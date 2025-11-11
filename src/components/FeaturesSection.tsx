@@ -1,32 +1,34 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import appBooking from "@/assets/app-booking.png";
-import appDashboard from "@/assets/app-dashboard.png";
+import featureBooking from "@/assets/feature-booking.jpg";
+import featureQrScan from "@/assets/feature-qr-scan.jpg";
+import featureRelaxing from "@/assets/feature-relaxing.jpg";
+import featureTracking from "@/assets/feature-tracking.jpg";
 
 const FeaturesSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const features = [
     {
-      title: "Smart Seat Booking",
-      description: "Browse available study rooms and reserve your perfect spot with just a few taps",
-      image: appBooking,
+      title: "Book a Seat Easily",
+      description: "Browse available library study spaces and reserve your perfect spot with just a few taps",
+      image: featureBooking,
     },
     {
-      title: "Eco Pulse Dashboard",
-      description: "Track your environmental impact and mindful break statistics in real-time",
-      image: appDashboard,
+      title: "Scan to Confirm",
+      description: "Confirm your seat reservation by scanning the QR code at your chosen table",
+      image: featureQrScan,
     },
     {
-      title: "QR Scan Check-in",
-      description: "Confirm your seat reservation by scanning the QR code at your table",
-      image: appBooking,
+      title: "Take a Mindful Break",
+      description: "Relax, recharge, and prepare for your next lesson in a peaceful library space",
+      image: featureRelaxing,
     },
     {
-      title: "Rewards & Streaks",
-      description: "Earn green points and maintain streaks for consistent mindful breaks",
-      image: appDashboard,
+      title: "Track Your Progress",
+      description: "View your booking history and maintain healthy break habits throughout the semester",
+      image: featureTracking,
     },
   ];
 

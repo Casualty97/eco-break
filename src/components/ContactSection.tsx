@@ -14,8 +14,8 @@ const ContactSection = () => {
 
     setTimeout(() => {
       toast({
-        title: "Thanks for your interest!",
-        description: "We'll notify you when EcoBreak launches.",
+        title: "Thank you for subscribing!",
+        description: "You'll receive live updates about EcoBreak's rollout.",
       });
       setEmail("");
       setIsSubmitting(false);
@@ -32,10 +32,10 @@ const ContactSection = () => {
                 <Mail className="w-8 h-8 text-primary-foreground" />
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
-                Stay Updated
+                Stay Updated with EcoBreak
               </h2>
               <p className="text-lg text-muted-foreground">
-                Be the first to know when EcoBreak launches on your campus
+                Welcome to EcoBreak! Our app hasn't reached your campus yet — subscribe to get real-time updates when EcoBreak launches at your school.
               </p>
             </div>
 
