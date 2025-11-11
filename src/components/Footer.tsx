@@ -1,4 +1,5 @@
 import { Leaf, Mail, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -26,24 +27,24 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#features" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link to="/features" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   Features
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#impact" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Impact
-                </a>
+                <Link to="/how-it-works" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  How It Works
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link to="/contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -53,7 +54,7 @@ const Footer = () => {
             <ul className="space-y-2 mb-4">
               <li className="flex items-center gap-2 text-primary-foreground/80">
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">hello@ecobreak.com</span>
+                <span className="text-sm">pang_yu_fei@connect.ite.edu.sg</span>
               </li>
             </ul>
             <div className="flex gap-3">
