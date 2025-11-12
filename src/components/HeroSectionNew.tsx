@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-booking.jpg";
 import appMockup from "@/assets/app-dashboard.png";
 
 const HeroSectionNew = () => {
@@ -12,18 +11,7 @@ const HeroSectionNew = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background/95"></div>
-      </div>
-
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20 bg-gradient-to-b from-background via-eco-mint/50 to-background">
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left animate-fade-in-up">
