@@ -66,6 +66,10 @@ export default {
           lightGreen: "hsl(var(--eco-light-green))",
           cream: "hsl(var(--eco-cream))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
