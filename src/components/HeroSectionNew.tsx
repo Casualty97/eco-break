@@ -1,15 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import appMockup from "@/assets/dashboard.png";
 
 const HeroSectionNew = () => {
-  const scrollToFeatures = () => {
-    const element = document.querySelector("#features");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20 bg-gradient-to-b from-background via-eco-mint/50 to-background">
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -24,19 +18,28 @@ const HeroSectionNew = () => {
             </h2>
 
             <p className="text-lg sm:text-xl text-foreground mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Students often struggle to find a quiet place to rest between lessons. 
-              EcoBreak helps you book a library seat effortlessly, scan a QR code to confirm, 
-              and take a mindful break before your next class.
+              EcoBreak helps students book library seats and take meaningful breaks between lessons — because rest is part of learning.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
                 size="lg"
-                onClick={scrollToFeatures}
+                asChild
                 className="rounded-full text-base px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105"
               >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <Link to="/get-started">
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => window.open("https://toffee-ivy-22540297.figma.site", "_blank")}
+                className="rounded-full text-base px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105"
+              >
+                Download App
+                <ExternalLink className="ml-2 w-5 h-5" />
               </Button>
             </div>
           </div>

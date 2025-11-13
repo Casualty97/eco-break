@@ -16,30 +16,13 @@ const WhyEcoBreak = () => {
           </div>
 
           <div className="space-y-6 animate-fade-in-up text-center">
-            <p className="text-lg leading-relaxed text-foreground">
-              Campus life can be overwhelming. Many students go through the day without 
-              truly resting. Between back-to-back classes, assignments, and social commitments, 
-              finding a moment of peace feels impossible.
+            <p className="text-xl leading-relaxed text-foreground max-w-3xl mx-auto">
+              Students need structured rest. EcoBreak gives them quiet spaces to reset and refocus between classes.
             </p>
             
-            <p className="text-lg leading-relaxed text-foreground">
-              We noticed that students often struggle to find a quiet, comfortable space to 
-              unwind between lessons. The library has peaceful areas, but they're not always 
-              easy to access or reserve.
-            </p>
-            
-            <p className="text-lg leading-relaxed text-foreground">
-              EcoBreak was designed to solve this problem. It helps students take meaningful, 
-              restorative breaks in the library—a calm space to recharge and refocus before 
-              returning to class with renewed energy and clarity.
-            </p>
-
-            <div className="pt-4 max-w-2xl mx-auto">
-              <div className="bg-eco-lightGreen/30 border-l-4 border-primary p-6 rounded-r-xl">
-                <p className="text-base italic text-foreground">
-                  "A well-rested mind is the foundation of academic success. EcoBreak ensures 
-                  every student has access to the peace they need to thrive."
-                </p>
+            <div className="pt-8">
+              <div className="w-full max-w-2xl mx-auto aspect-video rounded-2xl bg-gradient-to-br from-eco-mint to-eco-lightGreen flex items-center justify-center shadow-lg">
+                <p className="text-lg text-primary/60 italic">Students in library, reading quietly</p>
               </div>
             </div>
           </div>

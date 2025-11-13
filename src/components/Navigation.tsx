@@ -19,9 +19,9 @@ const Navigation = () => {
   const location = useLocation();
 
   const navLinks = [
-    { to: "/about", label: "About" },
-    { to: "/features", label: "Features" },
-    { to: "/how-it-works", label: "How It Works" },
+    { to: "/", label: "Home" },
+    { to: "/get-started", label: "Get Started" },
+    { to: "/features", label: "App Features" },
     { to: "/contact", label: "Contact" },
   ];
 
