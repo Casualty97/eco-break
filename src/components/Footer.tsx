@@ -32,13 +32,13 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/get-started" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Get Started
+                <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  About
                 </Link>
               </li>
               <li>
                 <Link to="/features" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  App Features
+                  Features
                 </Link>
               </li>
               <li>

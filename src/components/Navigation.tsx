@@ -20,8 +20,8 @@ const Navigation = () => {
 
   const navLinks = [
     { to: "/", label: "Home" },
-    { to: "/get-started", label: "Get Started" },
-    { to: "/features", label: "App Features" },
+    { to: "/about", label: "About" },
+    { to: "/features", label: "Features" },
     { to: "/contact", label: "Contact" },
   ];
 
@@ -34,8 +34,8 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2 group">
-            <img src={logoImage} alt="EcoBreak Logo" className="w-8 h-8 md:w-10 md:h-10 transition-transform group-hover:scale-110" />
-            <span className="text-xl md:text-2xl font-semibold text-primary">EcoBreak</span>
+            <img src={logoImage} alt="EcoBreak Logo" className="w-10 h-10 md:w-12 md:h-12 transition-transform group-hover:scale-110" />
+            <span className="text-2xl md:text-3xl font-bold text-primary">EcoBreak</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -51,7 +51,12 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
-            <Button variant="default" size="default" className="rounded-full">
+            <Button 
+              variant="default" 
+              size="default" 
+              className="rounded-full"
+              onClick={() => window.open("https://toffee-ivy-22540297.figma.site", "_blank")}
+            >
               Download App
             </Button>
           </div>
@@ -79,10 +84,15 @@ const Navigation = () => {
                 }`}
               >
                 {link.label}
-              </Link>
+            </Link>
             ))}
             <div className="px-4 pt-2">
-              <Button variant="default" size="default" className="w-full rounded-full">
+              <Button 
+                variant="default" 
+                size="default" 
+                className="w-full rounded-full"
+                onClick={() => window.open("https://toffee-ivy-22540297.figma.site", "_blank")}
+              >
                 Download App
               </Button>
             </div>

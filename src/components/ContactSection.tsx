@@ -1,11 +1,16 @@
 import { useState } from "react";
-import { Mail, Send } from "lucide-react";
+import { Mail, Send, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
-  const [email, setEmail] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -14,64 +19,101 @@ const ContactSection = () => {
 
     setTimeout(() => {
       toast({
-        title: "Thank you for subscribing!",
-        description: "You'll receive live updates about EcoBreak's rollout.",
+        title: "Message sent successfully!",
+        description: "We'll get back to you as soon as possible.",
       });
-      setEmail("");
+      setFormData({ name: "", email: "", message: "" });
       setIsSubmitting(false);
     }, 1000);
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-gradient-to-b from-eco-mint/20 to-background">
+    <section className="py-20 md:py-32 bg-gradient-to-b from-eco-mint/30 to-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-gradient-to-br from-primary/10 via-eco-lightGreen/20 to-accent/10 rounded-3xl p-8 md:p-12 shadow-2xl border border-border animate-fade-in-up">
-            <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-6">
-                <Mail className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
-                Stay Updated with EcoBreak
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Welcome to EcoBreak! Our app hasn't reached your campus yet — subscribe to get real-time updates when EcoBreak launches at your school.
-              </p>
-            </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12 animate-fade-in-up">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary mb-6">
+              Get in Touch
+            </h1>
+            <p className="text-xl text-foreground">
+              We'd love to hear from you.
+            </p>
+          </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Input
-                  type="email"
-                  placeholder="Enter your email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="flex-1 h-12 text-base rounded-full bg-card border-border"
-                />
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="bg-card rounded-3xl p-8 md:p-10 shadow-xl border border-border animate-fade-in-up">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    Name
+                  </label>
+                  <Input
+                    id="name"
+                    type="text"
+                    placeholder="Your name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                    className="h-12 text-base rounded-lg"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    Email
+                  </label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="your.email@example.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
+                    className="h-12 text-base rounded-lg"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    Message
+                  </label>
+                  <Textarea
+                    id="message"
+                    placeholder="Tell us what's on your mind..."
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    required
+                    className="min-h-[150px] text-base rounded-lg resize-none"
+                  />
+                </div>
+
                 <Button
                   type="submit"
                   size="lg"
                   disabled={isSubmitting}
-                  className="rounded-full whitespace-nowrap px-8"
+                  className="w-full rounded-full text-base"
                 >
-                  {isSubmitting ? "Subscribing..." : "Subscribe"}
+                  {isSubmitting ? "Sending..." : "Send Message"}
                   <Send className="ml-2 w-4 h-4" />
                 </Button>
-              </div>
-              <p className="text-sm text-muted-foreground text-center">
-                We respect your privacy. Unsubscribe at any time.
-              </p>
-            </form>
+              </form>
+            </div>
 
-            <div className="mt-12 pt-8 border-t border-border">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="outline" size="lg" className="rounded-full">
-                  Download for iOS
-                </Button>
-                <Button variant="outline" size="lg" className="rounded-full">
-                  Download for Android
-                </Button>
+            <div className="space-y-8 animate-fade-in-up">
+              <div className="bg-eco-mint/30 rounded-2xl p-8 border border-border">
+                <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+                  <Mail className="w-7 h-7 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Email Us</h3>
+                <p className="text-foreground">pang_yu_fei@connect.ite.edu.sg</p>
+              </div>
+
+              <div className="bg-eco-mint/30 rounded-2xl p-8 border border-border">
+                <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-4">
+                  <User className="w-7 h-7 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Support Hours</h3>
+                <p className="text-foreground">Monday - Friday<br />9:00 AM - 5:00 PM SGT</p>
               </div>
             </div>
           </div>
