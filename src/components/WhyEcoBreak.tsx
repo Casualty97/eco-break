@@ -23,10 +23,11 @@ const WhyEcoBreak = () => {
             
             <div className="pt-8">
               <div className="w-full max-w-2xl mx-auto aspect-video rounded-2xl bg-gradient-to-br from-eco-mint to-eco-lightGreen flex items-center justify-center shadow-lg">
-                <img src={webImage}
-                  alt="Students reading quietly in library" 
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
-                  />
+              <img
+                src={webImage}
+                alt="Students Reading Quietly In Library"
+                className="relative w-full max-w-sm h-auto drop-shadow-2xl"
+              />
 
               </div>
             </div>
