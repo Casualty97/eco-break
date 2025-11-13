@@ -1,5 +1,5 @@
 import { Sparkles } from "lucide-react";
-import webImage from "@/assets/why-ecobreak.jpg";
+import webImage from "@/assets/Web 1.png";
 
 const WhyEcoBreak = () => {
   return (
@@ -26,7 +26,7 @@ const WhyEcoBreak = () => {
               <img
                 src={webImage}
                 alt="Students Reading Quietly In Library"
-                className="relative w-full max-w-sm h-auto drop-shadow-2xl"
+                className="relative w-full max-w-lg h-auto drop-shadow-2xl"
               />
 
               </div>
