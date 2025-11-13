@@ -1,4 +1,5 @@
 import { Sparkles } from "lucide-react";
+import webImage from "@/assets/Web 1.png";
 
 const WhyEcoBreak = () => {
   return (
@@ -22,7 +23,11 @@ const WhyEcoBreak = () => {
             
             <div className="pt-8">
               <div className="w-full max-w-2xl mx-auto aspect-video rounded-2xl bg-gradient-to-br from-eco-mint to-eco-lightGreen flex items-center justify-center shadow-lg">
-                <p className="text-lg text-primary/60 italic">Students in library, reading quietly</p>
+                <img src={webImage}
+                  alt="Students reading quietly in library" 
+                  className="w-full h-full object-cover rounded-2xl shadow-lg"
+                  />
+
               </div>
             </div>
           </div>
