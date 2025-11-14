@@ -95,7 +95,7 @@ const GetStarted = () => {
               </p>
               <Button
                 size="lg"
-                onClick={() => window.open("https://toffee-ivy-22540297.figma.site", "_blank")}
+                onClick={() => window.open("https://loud-editor-20488240.figma.site", "_blank")}
                 className="rounded-full text-base px-8 py-6 shadow-lg hover:shadow-xl transition-all hover:scale-105"
               >
                 Open the App

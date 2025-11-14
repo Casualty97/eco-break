@@ -55,7 +55,7 @@ const Navigation = () => {
               variant="default" 
               size="default" 
               className="rounded-full"
-              onClick={() => window.open("https://toffee-ivy-22540297.figma.site", "_blank")}
+              onClick={() => window.open("https://loud-editor-20488240.figma.site", "_blank")}
             >
               Download App
             </Button>
@@ -91,7 +91,7 @@ const Navigation = () => {
                 variant="default" 
                 size="default" 
                 className="w-full rounded-full"
-                onClick={() => window.open("https://toffee-ivy-22540297.figma.site", "_blank")}
+                onClick={() => window.open("https://loud-editor-20488240.figma.site", "_blank")}
               >
                 Download App
               </Button>
