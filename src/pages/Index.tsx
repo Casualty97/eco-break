@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import HeroSectionNew from "@/components/HeroSectionNew";
+import StatsSection from "@/components/StatsSection";
 import WhyEcoBreak from "@/components/WhyEcoBreak";
 import Footer from "@/components/Footer";
 
@@ -9,6 +10,7 @@ const Index = () => {
       <Navigation />
       <main>
         <HeroSectionNew />
+        <StatsSection />
         <WhyEcoBreak />
       </main>
       <Footer />
