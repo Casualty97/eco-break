@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import appMockup from "@/assets/6105181666809678866.jpg";
+import appMockup from "@/assets/dashboard.jpg";
 
 const HeroSectionNew = () => {
   return (

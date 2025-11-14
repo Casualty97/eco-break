@@ -1,5 +1,5 @@
 import { Sparkles } from "lucide-react";
-import webImage from "@/assets/Web 1.png";
+import webImage from "@/assets/why-ecobreak-newer.png";
 
 const WhyEcoBreak = () => {
   return (
