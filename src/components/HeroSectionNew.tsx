@@ -18,7 +18,7 @@ const HeroSectionNew = () => {
             </h2>
 
             <p className="text-lg sm:text-xl text-foreground mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              EcoBreak helps students book library seats and take meaningful breaks between lessons — because rest is part of learning.
+              EcoBreak is a mobile app designed to help students use their break time meaningfully by booking library seats and taking restful breaks before their next class.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

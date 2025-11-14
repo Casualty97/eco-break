@@ -18,6 +18,21 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     setTimeout(() => {
+      // Store message in localStorage
+      const newMessage = {
+        id: Date.now().toString(),
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        date: new Date().toISOString(),
+        read: false,
+      };
+
+      const existingMessages = localStorage.getItem("ecobreak_contact_messages");
+      const messages = existingMessages ? JSON.parse(existingMessages) : [];
+      messages.unshift(newMessage);
+      localStorage.setItem("ecobreak_contact_messages", JSON.stringify(messages));
+
       toast({
         title: "Message sent successfully!",
         description: "We'll get back to you as soon as possible.",
